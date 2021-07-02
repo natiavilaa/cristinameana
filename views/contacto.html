@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <title>CM - Diseño y organización de eventos</title>
+</head>
+
+<body>
+
+  <!-- encabezado -->
+  <header>
+    <nav>
+      <div>
+        <img src="../img/logo.png" alt="Logotipo de la marca Cristina Meana">
+      </div>
+      <div>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../views/sobremi.html">Sobre mí</a></li>
+          <li><a href="../views/galeria.html">Galería de eventos</a></li>
+          <li><a href="../views/servicios.html">Servicios</a></li>
+          <li><a href="../views/contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <img src="../img/facebook.png" alt="Ícono de Facebook">
+        <img src="../img/instagram.png" alt="Ícono de Instagram">
+      </div>
+    </nav>
+  </header>
+  <!-- fin del encabezado -->
+
+  <main> 
+  <!-- formulario -->
+  <section>
+    <div class=contacto>
+      <h1>Contactame!</h1>
+    </div>
+    <div class=formulario>
+      <form action="formulario.php" method="POST" enctype="multipart/form-data">
+        <fieldset>
+          <div class=formulario__datos>
+            <div class=formulario__datos1>
+              <h3>Datos de contacto</h3>
+            </div>
+            <div class=formulario__datos2>
+              <div class=datoss>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" placeholder="Escribí tu nombre">
+              </div>
+              <div class=datoss>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" placeholder="Escribí tu apellido">
+              </div>
+            </div>
+            <div class=formulario__datos3>
+              <div class=datoss>
+                <label for="email">Email de contacto</label>
+                <input type="email" name="email" placeholder="nombre@ejemplo.com">
+              </div>
+              <div class="datoss">
+                <label for="telefono">Teléfono</label>
+                <input type="text" name="telefono" placeholder="0000-0000">
+              </div>
+            </div>
+          </div>
+          <div class=formulario__evento>
+            <div class="formulario__evento1">
+              <h3>Información sobre el evento</h3>
+            </div>
+            <div class="formulario__evento2">
+              <div class="datoss">
+                <label for="evento">Evento a realizar</label>
+                <select name="evento">
+                  <option value="boda">Boda</option>
+                  <option value="15anos">15 años</option>
+                  <option value="infantil">Infantil</option>
+                  <option value="eventocorporativo">Evento Corporativo</option>
+                  <option value="mesadedulces">Mesa de dulces</option>
+                  <option value="reepciones">Recepciones</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulario__evento3">
+              <div class=datoss>
+                <label for="fecha">Fecha estimada</label>
+                <input type="date" name="fecha">
+              </div>
+              <div>
+                <div class="datoss">
+                  <label for="servicio">Tipo de servicio</label>
+                  <select name="servicio">
+                    <option value="basico">Básico</option>
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                </select>
+                </div>
+              </div>
+            </div>
+            <div class="formulario__evento4">
+              <div class="datoss">
+                <label for="comentarios">Comentarios</label>
+                <textarea name="comentarios" id="" cols="200" rows="10"placeholder="Deja aquí tus comentarios"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class=formulario__botones>
+            <div>
+              <input class=formulario__boton1 type="reset" name="reset" value="Limpiar datos">
+            </div>
+            <div>
+              <input class=formulario__boton2 type="submit" name="submit" value="Solicitar presupuesto">
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+  <!-- fin del formulario -->    
+  </main>
+  
+  <!-- footer -->
+  <footer>
+    <div class="footer__logo">
+      <img src="../img/logo.png" alt="Logotipo de la marca Cristina Meana">
+    </div>
+    <div>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../views/sobremi.html">Sobre mí</a></li>
+        <li><a href="../views/galeria.html">Galería de eventos</a></li>
+        <li><a href="../views/servicios.html">Servicios</a></li>
+        <li><a href="../views/contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer__copyrigth">
+      <div>
+        <p> <span>Cristina Meana</span> - Diseño y ambientación de eventos</p>
+      </div>
+      <div>
+        <img src="../img/facebookBlanco.png" alt="Ícono de Facebook">
+        <img src="../img/instagramBlanco.png" alt="Ícono de Instagram">
+      </div>
+    </div>
+  </footer>
+  <!-- fin del footer -->
+
+</body>
+</html>
+
