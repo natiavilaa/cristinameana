@@ -54,6 +54,8 @@ nav{
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  z-index: 1;
 }
 
 nav ul{
