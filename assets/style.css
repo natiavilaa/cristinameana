@@ -9,93 +9,79 @@ main{
   font-family: 'Poppins', sans-serif;
 }
 
-h1{
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 5rem;
-}
-
-h2{
-  font-family: 'Poppins', sans-serif;
-  font-style:normal;
-  font-weight: 700;
-  font-size: 4rem;
-}
-
-h3{
-  font-family: 'Poppins', sans-serif;
-  font-style:normal;
-  font-weight: 600;
-  font-size: 2.5rem;
-}
-
-p{
-  font-family: 'Poppins', sans-serif;
-  font-style:normal;
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-
 a{
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
   color: black;
 }
 
-/* header */
-nav{
-  background-color: #E5DDD3;
-  position:fixed;
-  width: 100vw;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  position: fixed;
-  z-index: 1;
-}
-
-nav ul{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  list-style: none;
-}
-
-nav ul li{
-  padding: 30px;
-  font-weight: 500;
-}
-
-nav ul li a{ 
-  font-size: 1.5rem;
+a:hover{
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
   color: black;
-  padding: 5px 10px;
-  transition: all 0.7s;
 }
 
-nav ul li a:hover{
-  background-color: #D39788;
-  border-bottom: solid 0.5px black;
+/* header */
+nav{ 
+  z-index: 1;
+  position: fixed;
+  width: 100vw;
+  background-color: #EFD6CE;
+}
+
+nav ul li a, .nav-item, .nav-link{ 
+  font-size: 1.3rem;
+  color: rgb(160, 160, 160);
+  border-bottom: solid 1px transparent;
+  padding: 0 5px;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover, .navi-item:hover, .nav-link:hover{
+  color: black;
+  border-bottom: solid 1px black;
+}
+
+.navActive{
+  font-weight: 600;
+  color: black;
+  border-bottom: solid 1px black;
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(0,0,0,.5);
+  border: none;
 }
 
 nav img{
-  padding: 20px
+  padding: 5px 20px;
+}
+
+nav img:hover{
+  padding: 5px 20px;
+}
+
+.dropdown-menu {
+  background-color: #EFD6CE;
+  border: none;
+  border-radius: 10px;
+}
+
+.dropdown-item:hover {
+  background-color: #e4bbae;
+  color: black;
 }
 
 /* footer */
 footer{ 
   background-color: #475418;
-  width: 100vw;
   height: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
   padding: 20px 0;  
+  width: 100%;
 }
 
 .footer__logo{
@@ -105,7 +91,7 @@ footer{
 footer ul{
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   list-style: none;
   margin-bottom: 20px;
@@ -122,6 +108,8 @@ footer ul li a{
 
 footer ul li a:hover{
   border-bottom: solid 0.5px white;
+  color: white;
+  text-decoration: none;
 }
 
 footer img{
@@ -131,6 +119,7 @@ footer img{
 .footer__copyrigth{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   border-top: solid 0.3px white;
@@ -138,8 +127,6 @@ footer img{
 }
 
 .footer__copyrigth p{
-  font-size: 1.3rem;
-  font-weight: 300;
   font-style: italic;
   color:lightgrey;
 }
@@ -188,42 +175,40 @@ footer img{
 
 /* -- INICIO -- */
 /* carrousel */
-.carrousel{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/carrousel1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100vw;
-  height: 1000px;
-  color:white;
+.carousel{
+  z-index: 0
+}
+
+.carousel img{
+  object-fit: cover;
+  object-position: center;
+  height: 90vh;
+}
+
+button .navbar-toggler{
+  z-index: 1;
+}
+
+button:focus{
+  outline: 1px dotted;
+  outline: 5px white;
+}
+
+.carousel-caption{
+  margin-bottom: 50px;
 }
 
 /* presentacion */
 .presentacion{
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content:space-around;
-  align-items: center;
-  margin: 150px 0;
+  margin: 75px auto;
+  width: 90vw;
 }
 
 .presentacion__foto img{
   border-radius: 500px;
-}
-
-.presentacion__info{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.presentacion__info p{
-  padding: 20px 0;
+  margin-bottom: 30px;
 }
 
 /* eventos */
@@ -232,7 +217,8 @@ footer img{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 150px 0;
+  margin: 75px auto;
+  width: 80vw;
 }
 
 .eventos__titulo{
@@ -250,7 +236,6 @@ footer img{
   grid-template-rows: repeat(4, 250px); 
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  width: 80vw;
 }
 
 .bodas{
@@ -301,12 +286,13 @@ footer img{
   flex-direction: column;
   align-items: center;
   background-color: #E5DDD3; 
-  margin: 150px 0;
-  padding: 50px 0;
+  margin: 75px auto;
+  padding: 10px 0;
 }
 
 .testimonios__titulo{
   margin: 30px 0;
+  text-align: center;
 }
   
 .testimonios__cards{
@@ -330,7 +316,7 @@ footer img{
   border-radius: 20px;
   text-align: center;
   margin: 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .testimonios__foto{
@@ -342,61 +328,38 @@ footer img{
 }
 
 /* servicios */
-.servicios{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  margin: 150px 0;
-}
-
 .servicios__titulo{
-  margin: 30px 0;
+  margin: 50px auto;
+  align-self: center;
+  text-align: center;
 }
 
-.servicios__cards{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
+.contenedorCards{
+  margin: 0 auto 75px auto;
+  width: 90vw;
 }
 
-.servicios__card1{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  border-radius: 30px;
+.card{
+  border-width: 0px;
+  border-radius: 25px;
+  background-color:#D4D8B6;
+  margin: 25px;
+}
+
+.card img{
+  border-radius: 25px 25px 0 0;
+}
+
+.card-body{
   padding: 30px;
-  margin: 0 20px;
-  background-color: #D4D8B6;
 }
 
-.servicios__card2{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  border-radius: 30px;
-  padding: 30px;
-  margin: 0 20px;
+.card1{
+ background-color: #D4D8B6;
+  
+}
+.card2{
   background-color: #EFD6CE;
-}
-
-.servicios__info{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 0 30px 0 10px;
-}
-
-.servicios__foto img{
-  border-radius: 20px;
-  size: 320px;
-}
-
-.servicios__parrafo{
-  margin-bottom: 10px;
 }
 
 /* -- SOBRE MI -- */
@@ -587,17 +550,17 @@ footer img{
     "foto8 foto8 foto9 foto10";
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(4, 400px); 
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
   width: 80vw;
 }
 
 .galeria__fotos div{
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .galeria__fotos div:hover{
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .foto1{
@@ -916,12 +879,220 @@ form h3{
 }
 
 /* media queries */
-@media (max-width: 414px){
-}
-  
-@media (min-width: 415px) and (max-width: 834px){
+@media (min-width: 992px){
+h1{
+  font-size: 4.5rem;
+  font-weight: 700;
 }
 
-@media (min-width: 835px){
+h2{
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h3{
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+p{
+  font-size: 1.4rem;
+}
+
+footer ul li a{
+  font-size: 1.1rem;
+}
+
+.navbar{ 
+  z-index: 1;
+  position: fixed;
+  width: 100vw
+}
+
+.presentacion__foto img{
+  width: 80%;
+}
 }
   
+@media (min-width: 768px) and (max-width: 991px){
+h1{
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h3{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+p{
+  font-size: 1.2rem;
+}
+
+footer ul li a{
+  font-size: 1rem;
+}
+
+.navbar{ 
+  z-index: 1;
+  position: fixed;
+  width: 100vw
+}
+
+.presentacion{
+  text-align: center;
+}
+
+.presentacion__foto img{
+  width: 90%;
+}
+
+.eventos__categorias {
+  display: grid;
+  grid-template-areas:
+    "bodas quince"
+    "bodas cumples"
+    "recep recep"
+    "casa rincones";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 180px); 
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.servicios__cards{
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+.servicios__card1, .servicios__card2{
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 20px;
+  justify-content: center;
+}
+
+.servicios__info{
+  padding: 0;
+  align-items: center;
+  text-align: center;
+}
+
+.servicios__foto img{
+  width: 300px
+}
+}
+
+@media (max-width: 767px){
+h1{
+  font-size: 3rem;
+  font-weight: 700;
+}
+  
+h2{
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+p{
+  font-size: 1rem;
+}
+
+.navbar{ 
+  z-index: 1;
+  position: fixed;
+  width: 100vw
+}
+
+footer ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  list-style: none;
+}
+
+footer ul li{
+padding: 5px;
+}
+
+footer ul li a{
+  font-size: 0.8rem;
+}
+
+footer img{
+  transform: scale(0.5);
+  padding: 0
+}
+
+.boton, .boton--rosa{	
+  width: 150px; 
+	height: 40px;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+.boton__texto{
+  font-size: 1rem;
+}
+
+.presentacion{
+  text-align: center;
+}
+
+.presentacion__foto img{
+  width: 80%;
+}
+
+.eventos__categorias {
+  display: grid;
+  grid-template-areas:
+    "bodas quince"
+    "bodas cumples"
+    "recep recep"
+    "casa rincones";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 180px); 
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.testimonios__cards{
+  flex-wrap: wrap;
+}
+
+.servicios__cards{
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+.servicios__card1, .servicios__card2{
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 20px;
+  justify-content: center;
+}
+
+.servicios__info{
+  padding: 0;
+  align-items: center;
+  text-align: center;
+}
+
+.servicios__foto img{
+  width: 200px
+}
+}
