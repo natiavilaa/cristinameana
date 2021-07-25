@@ -1,0 +1,299 @@
+//colores
+$rosaViejo: #EFD6CE;
+$rosa: #EFD6CE, #D39788, #BC716D;
+$verde: #D4D8B6, #A4B26B, #778C3A, #475418;
+
+//botones
+$botonAncho: 200px;
+$botonAlto: 70px;
+
+//tipografía
+@mixin fontPoppins ($size, $weight){ 
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+/* RESETEO CSS */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ESTILOS GENERALES */
+/* titulos, parrafos y enlaces */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+@media (min-width: 992px){
+    h1{
+        @include fontPoppins(4.5rem, 700)
+    }
+    h2{
+        @include fontPoppins(3rem, 600)
+    }
+    h3{
+        @include fontPoppins(2.5rem, 500)
+    }
+    p{
+        @include fontPoppins(1.4rem, 400)
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    h1{
+        @include fontPoppins(4rem, 700)
+    }
+    h2{
+        @include fontPoppins(2.5rem, 600)
+    }
+    h3{
+        @include fontPoppins(2rem, 500)
+    }
+    p{
+        @include fontPoppins(1.2rem, 400)
+    }
+}
+
+@media (max-width: 767px){
+    h1{
+        @include fontPoppins(3rem, 700)
+    }
+    h2{
+        @include fontPoppins(2.2rem, 600)
+    }
+    h3{
+        @include fontPoppins(1.5rem, 500)
+    }
+    p{
+        @include fontPoppins(1rem, 400)
+    }
+}
+
+a{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: black;
+    &:hover{
+        @extend a;
+    }
+}
+  
+/* nav */
+nav{ 
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+    background-color: $rosaViejo;
+        ul{
+            li{
+                a{
+                    font-size: 1.3rem;
+                    color: rgb(160, 160, 160);
+                    border-bottom: solid 1px transparent;
+                    padding: 0 50px;
+                    transition: all 0.3s;
+                    &:hover{
+                        color: black;
+                        border-bottom: solid 1px black;
+                    }
+                }
+            }
+        }
+    
+    a{
+        img{
+            padding: 5px 20px;
+            &:hover{
+                padding: 5px 20px;
+            }
+        }
+    }
+    &:hover{
+        color: black;
+        border-bottom: solid 1px black;
+    }
+}
+  
+.nav-link{ 
+    font-size: 1.3rem;
+    color: rgb(160, 160, 160);
+    border-bottom: solid 1px transparent;
+    padding: 0 5px;
+    transition: all 0.3s;
+    &:hover{
+        color: black;
+        border-bottom: solid 1px black;
+    }
+}
+
+.nav-item{ 
+    @extend .nav-link;
+    &:hover{
+        border-bottom: solid 1px transparent;
+    }
+}
+
+.navActive{
+    font-weight: 600;
+    color: black;
+    border-bottom: solid 1px black;
+}
+
+.navbar{ 
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+    border-bottom: solid 1px transparent;
+    &:hover{
+        border-bottom: solid 1px transparent;
+    }
+  }
+
+.navbar-light .navbar-toggler{
+    color: rgba(0,0,0,.5);
+    border: none;
+}
+  
+.dropdown-menu {
+    background-color: nth($rosa,1);
+    border: none;
+    border-radius: 10px;
+}
+  
+.dropdown-item:hover {
+    background-color: nth($rosa,2);
+    color: black;
+}
+  
+/* footer */
+footer{
+    background-color: nth($verde,4);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 20px 0;  
+    width: 100%;
+    div{
+        img{
+            padding: 20px;
+            @media (max-width: 767px){
+                transform: scale(0.5);
+                padding: 0
+            }
+        }
+    }
+    div{
+        ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 20px;
+            @media (max-width: 767px){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                text-align: center;
+                list-style: none;
+            }
+            li{
+                padding: 20px;
+                @media (max-width: 767px){
+                    padding: 5px;
+                }
+                a{
+                    color: white;
+                    &:hover{
+                        border-bottom: solid 0.5px white;
+                        color: white;
+                        text-decoration: none;
+                    }
+                    @media (min-width: 992px){
+                        font-size: 1.2rem;
+                    }
+                    @media (min-width: 768px) and (max-width: 991px){
+                        font-size: 1rem;
+                    }
+                    @media (max-width: 767px){
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer__logo{
+    align-self: center;
+}
+
+.footer__copyrigth{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-top: solid 0.3px white;
+    padding: 20px ;
+    p{
+        font-style: italic;
+        color:lightgrey;
+        span{
+            font-weight: 600;
+        } 
+    }
+}
+
+/* botones */
+.boton{
+    display: inline-flex;
+    padding: 0 30px;
+    width: $botonAncho; 
+    height: $botonAlto;
+    background-color: nth($verde,2);
+    border-radius: 25px;
+    align-items: center;
+    &:hover{
+        background-color: nth($verde,3);
+    }
+    @media (max-width: 767px){
+        width: $botonAncho - 50; 
+        height: $botonAlto / 2;
+        border-radius: 15px;
+        padding: 10px 20px;
+    }
+}
+
+.boton--rosa{
+    @extend .boton;
+    background-color: nth($rosa,2);
+    
+    &:hover{
+        background-color: nth($rosa,3);
+    }
+}
+
+.boton__texto{
+    @include fontPoppins(1.5rem, 500);
+    text-align: left;
+    color: black;
+    &:hover{
+        color: black;
+    }
+    @media (max-width: 767px){
+        @include fontPoppins(1rem, 500);
+    }
+}
+
+//archivos parciales
+@import "inicio";
+@import "sobreMi";
+@import "galeria";
+@import "servicios";
+@import "contacto";

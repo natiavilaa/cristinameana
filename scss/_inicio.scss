@@ -1,0 +1,286 @@
+/* -- INICIO -- */
+/* carrousel */
+.carousel{
+    z-index: 0;
+    img{
+        object-fit: cover;
+        object-position: center;
+        height: 90vh;
+    }
+}
+  
+button{
+    .navbar-toggler{
+        z-index: 1;
+    }
+    &:focus{
+        outline: 1px dotted;
+        outline: 5px white;
+    }
+}
+
+.carousel-caption{
+    margin-bottom: 50px;
+}
+  
+/* presentacion */
+.presentacion{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 75px auto;
+    width: 90vw;
+    @media (min-width: 768px) and (max-width: 991px){
+        text-align: left;
+    }
+    @media (max-width: 767px){
+        text-align: center;
+    }
+}
+  
+.presentacion__foto{
+    img{
+        border-radius: 500px;
+        margin-bottom: 30px;
+        width: 80%;
+    }
+}
+ 
+/* eventos */
+.eventos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 75px auto;
+    width: 80vw;
+  }
+  
+.eventos__titulo{
+    margin: 30px 0;
+}
+  
+.eventos__categorias {
+    display: grid;
+    grid-template-areas:
+      "bodas quince quince"
+      "bodas cumples rincones"
+      "recep recep rincones"
+      "recep recep casa";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 250px); 
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.bodas{
+    grid-area: bodas;
+    background-image: linear-gradient(to right, nth($rosa,1), nth($rosa,2));
+    border-radius: 25px;
+    padding: 20px;
+}
+  
+.cumples{
+    grid-area: cumples;
+    background-color: nth($rosa,1);
+    border-radius: 25px;
+    padding: 20px;
+}
+  
+.quince{
+    grid-area: quince;
+    background-color: nth($verde,1);
+    border-radius: 25px;
+    padding: 20px;
+}
+  
+.rincones{
+    grid-area: rincones;
+    background-image: linear-gradient(to right, nth($rosa,1), nth($rosa,2));
+    border-radius: 25px;
+    padding: 20px;
+}
+  
+.recep{
+    grid-area: recep;
+    background-image: linear-gradient(to right, nth($verde,1), nth($verde,2));
+    border-radius: 25px;
+    padding: 20px;
+}
+  
+.casa{
+    grid-area: casa;
+    background-color: nth($rosa,1);
+    border-radius: 25px;
+    padding: 20px;
+}
+  
+/* testimonios */
+.testimonios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $rosaViejo; 
+    margin: 75px auto;
+    padding: 10px 0;
+    p {
+        text-align: center;
+    }
+}
+  
+.testimonios__titulo{
+    margin: 30px 0;
+    text-align: center;
+}
+    
+.testimonios__cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+}
+  
+.testimonios__card1, .testimonios__card2, .testimonios__card3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.testimonios__info{ 
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+}
+  
+.testimonios__foto{
+    border-radius: 250px;
+}
+  
+/* servicios */
+.servicios__titulo{
+    margin: 50px auto;
+    align-self: center;
+    text-align: center;
+}
+  
+.contenedorCards{
+    margin: 0 auto 75px auto;
+    width: 90vw;
+}
+  
+.card{
+    border-width: 0px;
+    border-radius: 25px;
+    margin: 25px;
+    img{
+        border-radius: 25px 25px 0 0;
+    }
+}
+  
+.card-body{
+    padding: 30px;
+}
+  
+.card1{
+   background-color: nth($verde,1);
+    
+}
+.card2{
+    background-color: nth($rosa,1);
+}
+
+/* media queries */
+
+    
+@media (min-width: 768px) and (max-width: 991px){
+ 
+  .eventos__categorias {
+    display: grid;
+    grid-template-areas:
+      "bodas quince"
+      "bodas cumples"
+      "recep recep"
+      "casa rincones";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 180px); 
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  
+  .servicios__cards{
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .servicios__card1, .servicios__card2{
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .servicios__info{
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .servicios__foto img{
+    width: 300px
+  }
+  }
+  
+  @media (max-width: 767px){
+  .presentacion{
+    text-align: center;
+  }
+  
+  .presentacion__foto img{
+    width: 80%;
+  }
+  
+  .eventos__categorias {
+    display: grid;
+    grid-template-areas:
+      "bodas quince"
+      "bodas cumples"
+      "recep recep"
+      "casa rincones";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 180px); 
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+  
+  .testimonios__cards{
+    flex-wrap: wrap;
+  }
+  
+  .servicios__cards{
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .servicios__card1, .servicios__card2{
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .servicios__info{
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .servicios__foto img{
+    width: 200px
+  }
+  }

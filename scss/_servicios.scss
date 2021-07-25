@@ -1,0 +1,91 @@
+/* -- SERVICIOS -- */
+/* proceso de diseno */
+.proceso{
+    padding-top: 150px;
+  }
+  
+  .proceso h1{
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  
+  .etapas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+  }
+  
+  /* servicios */
+  .service{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 150px 0;
+  }
+  
+  .service__card1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 100px 0;
+  }
+  
+  .service__foto1 img{
+    border-radius: 500px;
+  }
+  
+  .service__info1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .service__card2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #EFD6CE;
+  }
+  
+  .service__foto2 img{
+    border-radius: 500px;
+    transform: scale(1.2);
+  }
+  
+  .service__info2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+  }
+  
+  /* boton */
+  .boton__servicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    gap: 20px;
+    background-image: url(../img/carrousel1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    padding: 50px;
+    margin: 100px 50px;
+    color: white;
+  }
+  
+  .botonLargo{	
+    display: inline-flex;
+    padding: 0 30px;
+    width: 400px; 
+      height: 70px;
+    background-color: #A4B26B;
+    border-radius: 25px;
+      align-items: center;
+  }
+  
+  .botonLargo:hover{
+    background-color: white;
+  }

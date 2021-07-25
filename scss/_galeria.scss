@@ -1,0 +1,113 @@
+/* -- GALERIA -- */
+.galeria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0;
+  }
+  
+  .galeria h1{
+    margin-bottom: 50px;
+  }
+  
+  .galeria__fotos{
+    display: grid;
+    grid-template-areas:
+      "foto1 foto1 foto2 foto3"
+      "foto4 foto5 foto5 foto6"
+      "foto7 foto5 foto5 foto6"
+      "foto8 foto8 foto9 foto10";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 400px); 
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    width: 80vw;
+  }
+  
+  .galeria__fotos div{
+    transition: all 0.5s;
+  }
+  
+  .galeria__fotos div:hover{
+    transform: scale(1.05);
+  }
+  
+  .foto1{
+    grid-area: foto1;
+    border-radius: 25px;
+    background-image: url(../img/galeria1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .foto2{
+    grid-area: foto2;
+    border-radius: 25px;
+    background-image: url(../img/galeria2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .foto3{
+    grid-area: foto3;
+    border-radius: 25px;
+    background-image: url(../img/galeria3.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .foto4{
+    grid-area: foto4;
+    border-radius: 25px;
+    background-image: url(../img/galeria4.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .foto5{
+    grid-area: foto5;
+    border-radius: 25px;
+    background-image: url(../img/galeria5.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .foto6{
+    grid-area: foto6;
+    border-radius: 25px;
+    background-image: url(../img/galeria6.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .foto7{
+    grid-area: foto7;
+    border-radius: 25px;
+    background-image: url(../img/galeria7.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .foto8{
+    grid-area: foto8;
+    border-radius: 25px;
+    background-image: url(../img/galeria8.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .foto9{
+    grid-area: foto9;
+    border-radius: 25px;
+    background-image: url(../img/galeria9.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .foto10{
+    grid-area: foto10;
+    border-radius: 25px;
+    background-image: url(../img/galeria10.jpg);
+    background-size: cover;
+    background-position: center;
+  }
