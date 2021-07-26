@@ -46,13 +46,17 @@
 }
   
 .cristina__foto{
-  align-self: flex-end;
+  align-self: center;
   img{
-    @media (max-width: 991px){
-    height: 500px;
+    transform: rotate(20des);
+    @media (min-width: 12001px){
+      height: 500px;
+      }
+    @media (min-width: 992px) and (max-width: 1200px){
+      height: 350px;
     }
     @media (min-width: 768px) and (max-width: 991px){
-      height: 350px;
+      height: 250px;
     }
     @media (max-width: 767px){
       height: 0;
@@ -66,17 +70,9 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 150px auto;
-  width: 90vw;
-  @media (min-width: 992px) {
-    flex-wrap: nowrap;
-  }
-  @media (min-width: 768px) and (max-width: 991px) {
-    flex-wrap: wrap;
-  }
-  @media (max-width: 767px) {
-    flex-wrap: wrap;
-  }
+  margin: 100px auto;
+  width: 100vw;
+  flex-wrap: wrap;
 }
 
 .historia__fotos{
@@ -111,6 +107,7 @@
 .historia2{
   grid-area: historia2;
   border-radius: 5%;
+  margin-bottom: 50px;
   @media (min-width: 992px) {
     width: 600px;
     height: 400px;
@@ -144,11 +141,9 @@
 /* logros */
 .logros{
   display: flex;
-  
   justify-content: space-around;
   align-items: center;
   background-color: #E5DDD3;
-  margin: 150px 0;
   padding: 30px 0;
   @media (max-width: 767px){
     flex-direction: column;
@@ -178,7 +173,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
-  margin: 150px 0;
+  margin: 100px 0;
 }
 
 .hobbies__titulo{
