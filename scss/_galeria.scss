@@ -1,18 +1,43 @@
+//VARIABLES, LISTAS  Y MIXIN 
+//colores
+$rosaViejo: #E5DDD3;
+$rosa: #EFD6CE, #D39788, #BC716D;
+$verde: #D4D8B6, #A4B26B, #778C3A, #475418;
+
+//botones
+$botonAncho: 220px;
+$botonAlto: 70px;
+
+//tipografía
+@mixin fontPoppins ($size, $weight){ 
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: $size;
+    font-weight: $weight;
+}
+
 /* -- GALERIA -- */
 .galeria{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 150px 0;
-  }
-  
-  .galeria h1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 0 0 0;
+  h1{
     margin-bottom: 50px;
+    text-align: center;
   }
-  
-  .galeria__fotos{
-    display: grid;
+}
+
+.galeria__fotos{
+  display: grid;
+  div{
+    transition: all 0.5s;
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+  @media (min-width: 992px){
     grid-template-areas:
       "foto1 foto1 foto2 foto3"
       "foto4 foto5 foto5 foto6"
@@ -24,90 +49,96 @@
     grid-row-gap: 40px;
     width: 80vw;
   }
-  
-  .galeria__fotos div{
-    transition: all 0.5s;
+  @media (max-width: 991px){
+    grid-template-areas:
+      "foto1 foto2"
+      "foto3 foto4"
+      "foto5 foto6"
+      "foto7 foto8"
+      "foto9 foto10";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 200px); 
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    width: 80vw;
   }
-  
-  .galeria__fotos div:hover{
-    transform: scale(1.05);
-  }
-  
-  .foto1{
-    grid-area: foto1;
-    border-radius: 25px;
-    background-image: url(../img/galeria1.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .foto2{
-    grid-area: foto2;
-    border-radius: 25px;
-    background-image: url(../img/galeria2.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .foto3{
-    grid-area: foto3;
-    border-radius: 25px;
-    background-image: url(../img/galeria3.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .foto4{
-    grid-area: foto4;
-    border-radius: 25px;
-    background-image: url(../img/galeria4.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .foto5{
-    grid-area: foto5;
-    border-radius: 25px;
-    background-image: url(../img/galeria5.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .foto6{
-    grid-area: foto6;
-    border-radius: 25px;
-    background-image: url(../img/galeria6.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  .foto7{
-    grid-area: foto7;
-    border-radius: 25px;
-    background-image: url(../img/galeria7.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .foto8{
-    grid-area: foto8;
-    border-radius: 25px;
-    background-image: url(../img/galeria8.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .foto9{
-    grid-area: foto9;
-    border-radius: 25px;
-    background-image: url(../img/galeria9.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .foto10{
-    grid-area: foto10;
-    border-radius: 25px;
-    background-image: url(../img/galeria10.jpg);
-    background-size: cover;
-    background-position: center;
-  }
+}
+
+@mixin galeriaFotos ($area, $url){ 
+  grid-area: $area;
+  background-image: $url;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
+}
+
+.foto1{
+  @include galeriaFotos(foto1,url(../img/galeria1.jpg));
+}
+
+.foto2{
+  @include galeriaFotos(foto2,url(../img/galeria2.jpg));
+}
+
+.foto3{
+  @include galeriaFotos(foto3,url(../img/galeria3.jpg));
+}
+
+.foto4{
+  @include galeriaFotos(foto4,url(../img/galeria4.jpg));
+}
+
+.foto5{
+  @include galeriaFotos(foto5,url(../img/galeria5.jpg));
+}
+
+.foto6{
+  @include galeriaFotos(foto6,url(../img/galeria6.jpg));
+}
+
+.foto7{
+  @include galeriaFotos(foto7,url(../img/galeria7.jpg));
+}
+
+.foto8{
+  @include galeriaFotos(foto8,url(../img/galeria8.jpg));
+}
+
+.foto9{
+  @include galeriaFotos(foto9,url(../img/galeria9.jpg));
+}
+
+.foto10{
+  @include galeriaFotos(foto10,url(../img/galeria10.jpg));
+}
+
+/* botón de contacto*/
+.boton__galeria{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-content: center;
+  gap: 20px;
+  width: 80vw;
+  background-color:nth($rosa,1);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  padding: 50px;
+  margin: 100px auto;
+  color: black;
+}
+
+.botonLargo--rosa{	
+  display: inline-flex;
+  padding: 0 30px;
+  width: 400px; 
+  height: 70px;
+  background-color: nth($rosa,2);
+  border-radius: 25px;
+  align-items: center;
+}
+
+.botonLargo--rosa:hover{
+  background-color: nth($rosa,3);
+}

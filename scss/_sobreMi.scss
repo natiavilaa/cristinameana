@@ -1,13 +1,34 @@
+//VARIABLES, LISTAS  Y MIXIN 
+//colores
+$rosaViejo: #E5DDD3;
+$rosa: #EFD6CE, #D39788, #BC716D;
+$verde: #D4D8B6, #A4B26B, #778C3A, #475418;
+
+//botones
+$botonAncho: 200px;
+$botonAlto: 70px;
+
+//tipografía
+@mixin fontPoppins ($size, $weight){ 
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: $size;
+    font-weight: $weight;
+}
+
 /* -- SOBRE MI -- */
 /* cristina */
 .cristina{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:center;
   align-content: center;
   background-image: linear-gradient(to right, nth($verde,1), nth($verde,2));
   height: 700px;
   width: 100vw;
+  position: relative;
+  top: 50px;
+  gap: 50px;
   @media (min-width: 992px){
     flex-wrap: nowrap;
   }
@@ -25,6 +46,9 @@
   justify-content: center;
   align-items: flex-start;
   padding: 50px;
+  p{
+    max-width: 1200px;
+  }
   h2{
     color: nth($verde,3);
     font-size: 700;
@@ -68,28 +92,25 @@
 .historia{
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-  margin: 100px auto;
-  width: 100vw;
+  margin: 150px auto;
+  width: 80vw;
   flex-wrap: wrap;
+  gap:50px;
 }
 
 .historia__fotos{
-  display: grid;
-  grid-template-areas:
-    "historia1 historia1"
-    "historia2 historia2";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr; 
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 30px;
 }
 
 .historia1{
-  grid-area: historia1;
   border-radius: 5%;
+  max-width: 600px;
   @media (min-width: 992px) {
     width: 600px;
     height: 400px;
@@ -101,41 +122,29 @@
   @media (max-width: 767px) {
     width: 400px;
     height: 250px;
+  }
+  @media (max-width: 500px) {
+    width: 200px;
+    height: 150px;
   }
 }
 
 .historia2{
-  grid-area: historia2;
-  border-radius: 5%;
-  margin-bottom: 50px;
-  @media (min-width: 992px) {
-    width: 600px;
-    height: 400px;
-  }
-  @media (min-width: 768px) and (max-width: 991px) {
-    width: 500px;
-    height: 300px;
-  }
-  @media (max-width: 767px) {
-    width: 400px;
-    height: 250px;
-  }
+ @extend .historia1;
 }
 
 .historia__info{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
-}
-
-.historia__info p{
-  margin-bottom: 30px
-}
-
-.historia__info h2{
-  text-align: left;
-  margin-bottom: 30px
+  max-width: 800px;
+  p{
+    margin-bottom: 30px
+  }
+  h2{
+    text-align: left;
+    margin-bottom: 30px
+  }
 }
 
 /* logros */
@@ -143,7 +152,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #E5DDD3;
+  background-color: $rosaViejo;
   padding: 30px 0;
   @media (max-width: 767px){
     flex-direction: column;
@@ -153,7 +162,7 @@
 .logros__texto{
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
 }
 
 .logros__cifras{
@@ -174,6 +183,30 @@
   justify-content: space-around;
   align-content: center;
   margin: 100px 0;
+  h4{
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    @media (max-width: 767px){
+      font-size: 0.8rem;
+    }
+  }
+  img{
+    border-radius: 25px;
+    margin: 20px 0;
+    @media (min-width: 992px){
+      width: 500px;
+      height: 300px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      width: 80%;
+      height: 80%;
+    }
+    @media (max-width: 767px){
+      width: 70%;
+      height: 70%;
+    }
+  }
 }
 
 .hobbies__titulo{
@@ -184,8 +217,9 @@
 .hobbies__cards{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 100px;
 }
 
 .hobbies__card1, .hobbies__card2{ 
@@ -195,31 +229,5 @@
   align-items: flex-start;
   @media (max-width: 767px){
     align-items: center;
-  }
-}
-
-.hobbies h4{
-  font-size: 1.2rem;
-  font-weight: 400;
-  font-style: italic;
-  @media (max-width: 767px){
-    font-size: 0.8rem;
-  }
-}
-
-.hobbies img{
-  border-radius: 25px;
-  margin: 20px 0;
-  @media (min-width: 992px){
-    width: 500px;
-    height: 300px;
-  }
-  @media (min-width: 768px) and (max-width: 991px) {
-    width: 80%;
-    height: 80%;
-  }
-  @media (max-width: 767px){
-    width: 70%;
-    height: 70%;
   }
 }

@@ -1,145 +1,220 @@
-/* -- CONTACTO -- */
-/* formulario */
-.contacto{
-    padding-top: 150px;
-  }
-  
-  .contacto h1{
+//VARIABLES, LISTAS  Y MIXIN 
+//colores
+$rosaViejo: #E5DDD3;
+$rosa: #EFD6CE, #D39788, #BC716D;
+$verde: #D4D8B6, #A4B26B, #778C3A, #475418;
+
+//botones
+$botonAncho: 220px;
+$botonAlto: 70px;
+
+//tipografía
+@mixin fontPoppins ($size, $weight){ 
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+/* proceso de diseno */
+.proceso{
+  margin: 100px auto;
+  h2{
     text-align: center;
     margin-bottom: 50px;
   }
-  
-  form{
-    background-color: #d8dfb4;
-    border-radius: 50px;
-    margin-bottom: 100px;
-  }
-  
-  fieldset{
-    border: none;
-  }
-  
-  .formulario{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .formulario__datos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding:30px;
-    gap: 20px;
-  }
-  
-  .formulario__datos1{
-    margin-bottom: 20px;
-  }
-  
-  .formulario__datos2,.formulario__datos3{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 20px;  
-  }
-  
-  .datoss{
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .formulario__evento{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding:30px;
-    gap: 20px;
-  }
-  
-  .formulario__evento1{
-    margin-bottom: 20px;
-  }
-  
-  .formulario__evento2,.formulario__evento3,.formulario__evento4{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 20px; 
-  }
-  
-  form label{
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  
-  form ::placeholder, form select, form option {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-  }
-  
-  form option{
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-  }
-  
-  form input, form select, form option{
-    padding: 20px;
-    width: 25vw;
-  }
-  
-  form textarea{
-    padding: 20px;
-    width: 50vw;
-  }
-  
-  form h3{
-    font-size: 3rem;
-  }
-  
-  .formulario__botones{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 100px 0;
-  }
-  
-  .formulario__boton1{	
-    display: inline-flex;
-    padding: 0 30px;
-    width: 400px; 
-      height: 70px;
-    background-color: white;
-    border-radius: 25px;
-      align-items: center;
-    font-family: 'Poppins', sans-serif;
-    font-style:normal;
-    font-weight: 500;
-    font-size: 1.5rem;
-    text-align: left;
-    color: black;
-  }
-  
-  .formulario__boton1:hover, .formulario__boton2:hover{
-    background-color: #778C3A;
-  }
-  
-  .formulario__boton2{	
-    display: inline-flex;
-    padding: 0 30px;
-    width: 400px; 
-      height: 70px;
-    background-color: white;
-    border-radius: 25px;
-      align-items: center;
-    font-family: 'Poppins', sans-serif;
-    font-style:normal;
-    font-weight: 500;
-    font-size: 1.5rem;
-    text-align: left;
-    color: black;
-  }
+}
 
+.etapas{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 80vw;
+  margin: auto;
+  gap: 30px;
+  @media (max-width: 767px){
+    flex-wrap: wrap;
+  }
+  div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 400px;
+    img{
+      max-width: 150px;
+      margin-bottom: 20px;
+      align-self: center;
+    }     
+  }
+}
+
+/* botón de contacto*/
+.boton__servicios{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-content: center;
+  gap: 20px;
+  width: 80vw;
+  background-image: url(../img/carrousel1.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  padding: 50px;
+  margin: 100px auto;
+  color: white;
+  overflow: hidden;
+}
+
+/* -- CONTACTO -- */
+/* formulario */
+.contacto{
+  padding-top: 150px;
+  h1{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+form{
+  background-color: nth($verde,1);
+  border-radius: 50px;
+  margin-bottom: 100px;
+  max-width: 60vw;
+  padding: 50px;
+  @media (max-width: 767px){
+    max-width: 80vw;
+  }
+}
+
+fieldset{
+  border: none;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.formulario__datos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  h2{
+    margin-bottom: 20px;
+  }
+}
+
+.formulario__datos1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 20px;  
+  @media (max-width: 767px){
+    flex-direction: column;
+  }
+}
+
+.formulario__datos2{
+  @extend .formulario__datos1;
+}
+
+.datoss{
+  display: flex;
+  flex-direction: column;
+  min-width: 49%;
+}
+
+.formulario__evento{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 50px;
+  h2{
+    margin-bottom: 20px;
+  }
+}
+
+.formulario__evento1{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px; 
+  width: 100%; 
+}
+
+.formulario__evento2{
+  @extend .formulario__evento1;
+  @media (max-width: 767px){
+    flex-direction: column;
+  }
+}
+
+.formulario__evento3{
+  @extend .formulario__evento1;
+}
+
+.comentarioss{
+  display: flex;
+  flex-direction: column;
+  textarea{
+    width: 600px;
+  }
+}
+
+form label{
+  @include fontPoppins(1.2rem, 600);
+}
+
+form ::placeholder{
+  @include fontPoppins(1.2rem, 400);
+  padding: 15px 5px;
+  color: grey;
+}
+
+form input{
+  @include fontPoppins(1.2rem, 600);
+  padding: 15px 10px;
+  color: black;
+}
+
+form select{
+  @include fontPoppins(1.2rem, 600);
+  padding: 15px;
+  color: black;
+}
+
+form option{
+  @include fontPoppins(1.2rem, 400);
+  padding: 15px;
+  color: grey;
+} 
+
+form textarea{
+  @include fontPoppins(1.2rem, 400);
+  padding: 10px;
+  color: grey;
+  max-width: 80%;
+}
+
+.formulario__botones{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 30px;
   
+}
+
+.formulario__boton1:hover, .formulario__boton2:hover{
+  background-color: #778C3A;
+}
+

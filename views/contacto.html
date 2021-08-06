@@ -8,12 +8,15 @@
   <link rel="stylesheet" href="../css/animate.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e78fc278fc.js" crossorigin="anonymous"></script>
-  <title>CM - Diseño y organización de eventos</title>
+  <!-- estrategias SEO -->
+  <meta name="description" content="Organización y decoración de eventos sociales: bodas, cumpleaños y corporativos. Diseño, armado y desarmado. Mobiliario, mantelería, arreglos florales y mesa de dulces. Asesoramiento personalizado.">
+  <meta name="keywords" content="eventos sociales, decoración de eventos, wedding planner, bodas, 15 años, corporativos, recepciones, cumpleaños infantiles, salones de fiestas, arreglos florales, mesa de dulces, alquiler de livings, souvenirs">
+  <link rel="shortcut icon" href="../img/favicon.png">
+  <title>CM | Solicitud de presupuestos y contacto</title>
 </head>
 
 <body>
-
-  <!-- encabezado -->
+  <!-- barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand wow animate__animated animate__backInLeft" href="index.html">
       <img src="../img/logo.png" alt="Logotipo de la marca Cristina Meana">
@@ -49,7 +52,6 @@
       </ul>
     </div>
   </nav>
-  <!-- fin del encabezado -->
 
   <main> 
   <!-- formulario -->
@@ -61,10 +63,10 @@
       <form action="formulario.php" method="POST" enctype="multipart/form-data">
         <fieldset>
           <div class=formulario__datos>
-            <div class=formulario__datos1>
-              <h3>Datos de contacto</h3>
+            <div>
+              <h2>Datos de contacto</h2>
             </div>
-            <div class=formulario__datos2>
+            <div class=formulario__datos1>
               <div class=datoss>
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" placeholder="Escribí tu nombre">
@@ -74,9 +76,9 @@
                 <input type="text" name="apellido" placeholder="Escribí tu apellido">
               </div>
             </div>
-            <div class=formulario__datos3>
+            <div class=formulario__datos2>
               <div class=datoss>
-                <label for="email">Email de contacto</label>
+                <label for="email">Email</label>
                 <input type="email" name="email" placeholder="nombre@ejemplo.com">
               </div>
               <div class="datoss">
@@ -86,10 +88,10 @@
             </div>
           </div>
           <div class=formulario__evento>
-            <div class="formulario__evento1">
-              <h3>Información sobre el evento</h3>
+            <div>
+              <h2>Información sobre el evento</h2>
             </div>
-            <div class="formulario__evento2">
+            <div class="formulario__evento1">
               <div class="datoss">
                 <label for="evento">Evento a realizar</label>
                 <select name="evento">
@@ -99,45 +101,42 @@
                   <option value="eventocorporativo">Evento Corporativo</option>
                   <option value="mesadedulces">Mesa de dulces</option>
                   <option value="reepciones">Recepciones</option>
+                  <option value="otro">Otro</option>                
                 </select>
               </div>
             </div>
-            <div class="formulario__evento3">
+            <div class="formulario__evento2">
               <div class=datoss>
                 <label for="fecha">Fecha estimada</label>
                 <input type="date" name="fecha">
               </div>
-              <div>
-                <div class="datoss">
-                  <label for="servicio">Tipo de servicio</label>
-                  <select name="servicio">
-                    <option value="basico">Básico</option>
-                    <option value="standard">Standard</option>
-                    <option value="premium">Premium</option>
+              <div class="datoss">
+                <label for="servicio">Tipo de servicio</label>
+                <select name="servicio">
+                  <option value="standard">Standard</option>
+                  <option value="premium">Premium</option>
                 </select>
-                </div>
               </div>
             </div>
-            <div class="formulario__evento4">
+            <div class="formulario__evento3">
               <div class="datoss">
                 <label for="comentarios">Comentarios</label>
-                <textarea name="comentarios" id="" cols="200" rows="10"placeholder="Deja aquí tus comentarios"></textarea>
+                <textarea name="comentarios" cols="200" rows="5"placeholder="Deja aquí tus comentarios"></textarea>
               </div>
             </div>
           </div>
           <div class=formulario__botones>
             <div>
-              <input class=formulario__boton1 type="reset" name="reset" value="Limpiar datos">
+              <input class="boton boton__texto" type="reset" name="reset" value="Limpiar datos">
             </div>
             <div>
-              <input class=formulario__boton2 type="submit" name="submit" value="Solicitar presupuesto">
+              <input class="boton boton__texto" boton__texto type="submit" name="submit" value="Solicitar presupuesto">
             </div>
           </div>
         </fieldset>
       </form>
     </div>
   </section>
-  <!-- fin del formulario -->    
   </main>
   
   <!-- footer -->
@@ -165,14 +164,17 @@
     </div>
   </footer>
 
+  <!-- ícono flotante de whatsapp -->
+  <a href="https://api.whatsapp.com/send?phone=5493794753346" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+
   <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
   <script src="js/wow.min.js"></script>
   <script> new WOW().init();</script>
-  <!-- fin del scripts -->
 
 </body>
 </html>

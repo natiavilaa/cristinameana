@@ -1,10 +1,24 @@
+/* RESETEO CSS */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+//ARCHIVOS PARCIALES
+@import "inicio";
+@import "sobreMi";
+@import "galeria";
+@import "servicios";
+@import "contacto";
+
+//VARIABLES, LISTAS  Y MIXIN 
 //colores
-$rosaViejo: #EFD6CE;
+$rosaViejo: #E5DDD3;
 $rosa: #EFD6CE, #D39788, #BC716D;
 $verde: #D4D8B6, #A4B26B, #778C3A, #475418;
 
 //botones
-$botonAncho: 200px;
+$botonAncho: 220px;
 $botonAlto: 70px;
 
 //tipografía
@@ -15,59 +29,62 @@ $botonAlto: 70px;
     font-weight: $weight;
 }
 
-/* RESETEO CSS */
-*{
-    margin: 0;
-    padding: 0;
-}
-
 /* ESTILOS GENERALES */
-/* titulos, parrafos y enlaces */
+/* títulos, párrafos y enlaces */
 body{
     font-family: 'Poppins', sans-serif;
 }
 @media (min-width: 992px){
     h1{
-        @include fontPoppins(4.5rem, 700)
+        @include fontPoppins(4rem, 700)
     }
     h2{
         @include fontPoppins(3rem, 600)
     }
     h3{
-        @include fontPoppins(2.5rem, 500)
+        @include fontPoppins(2rem, 500)
     }
     p{
         @include fontPoppins(1.4rem, 400)
+    }
+    strong{
+        @include fontPoppins(4rem, 700)
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px){
     h1{
-        @include fontPoppins(4rem, 700)
+        @include fontPoppins(3.5rem, 700)
     }
     h2{
         @include fontPoppins(2.5rem, 600)
     }
     h3{
-        @include fontPoppins(2rem, 500)
+        @include fontPoppins(1.5rem, 500)
     }
     p{
         @include fontPoppins(1.2rem, 400)
+    }
+    strong{
+        @include fontPoppins(3.54rem, 700)
     }
 }
 
 @media (max-width: 767px){
     h1{
-        @include fontPoppins(3rem, 700)
+        @include fontPoppins(2.7rem, 700)
     }
     h2{
-        @include fontPoppins(2.2rem, 600)
+        @include fontPoppins(2rem, 600)
     }
     h3{
-        @include fontPoppins(1.5rem, 500)
+        @include fontPoppins(1.3rem, 500)
     }
     p{
         @include fontPoppins(1rem, 400)
+    }
+    strong{
+        @include fontPoppins(3rem, 700)
     }
 }
 
@@ -85,7 +102,7 @@ nav{
     z-index: 1;
     position: fixed;
     width: 100vw;
-    background-color: $rosaViejo;
+    background-color: nth($rosa,1);
         ul{
             li{
                 a{
@@ -222,10 +239,10 @@ footer{
                         font-size: 1.2rem;
                     }
                     @media (min-width: 768px) and (max-width: 991px){
-                        font-size: 1rem;
+                        font-size: 1.1rem;
                     }
                     @media (max-width: 767px){
-                        font-size: 0.8rem;
+                        font-size: 1rem;
                     }
                 }
             }
@@ -258,19 +275,23 @@ footer{
 .boton{
     display: inline-flex;
     padding: 0 30px;
-    width: $botonAncho; 
+    min-width: $botonAncho;
+    max-width: 350px;
     height: $botonAlto;
     background-color: nth($verde,2);
     border-radius: 25px;
     align-items: center;
+    border: none;
+    box-shadow: 2px 2px 3px rgb(78, 78, 78);
     &:hover{
         background-color: nth($verde,3);
     }
     @media (max-width: 767px){
-        width: $botonAncho - 50; 
-        height: $botonAlto / 2;
-        border-radius: 15px;
+        max-width: $botonAncho;
+        height: $botonAlto / 1.5;
+        border-radius: 20px;
         padding: 10px 20px;
+        align-items: center;
     }
 }
 
@@ -295,9 +316,25 @@ footer{
     }
 }
 
-//archivos parciales
-@import "inicio";
-@import "sobreMi";
-@import "galeria";
-@import "servicios";
-@import "contacto";
+/* ícono flotante de whatsapp */
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: nth($verde,3);
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 34px;
+    box-shadow: 2px 2px 3px rgb(78, 78, 78);
+    padding-top: 5px;
+}
+.procesoDiseno{
+    padding-top: 150px;
+    h2{
+      text-align: center;
+      margin-bottom: 100px;
+    }
+  }
