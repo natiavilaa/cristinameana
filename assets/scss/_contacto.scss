@@ -5,7 +5,7 @@ $rosa: #EFD6CE, #D39788, #BC716D;
 $verde: #D4D8B6, #A4B26B, #778C3A, #475418;
 
 //botones
-$botonAncho: 220px;
+$botonAncho: 180px;
 $botonAlto: 70px;
 
 //tipografía
@@ -16,7 +16,7 @@ $botonAlto: 70px;
     font-weight: $weight;
 }
 
-/* proceso de diseno */
+/* proceso de diseño */
 .proceso{
   margin: 100px auto;
   h2{
@@ -57,18 +57,18 @@ $botonAlto: 70px;
   align-content: center;
   gap: 20px;
   width: 80vw;
-  background-image: url(../img/carrousel1.jpg);
+  background-image: url(../../img/carrousel1.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 50px;
-  padding: 50px;
+  padding: 30px;
   margin: 100px auto;
   color: white;
   overflow: hidden;
 }
 
 /* -- CONTACTO -- */
-/* formulario */
+/* formulario de contacto */
 .contacto{
   padding-top: 150px;
   h1{
@@ -170,36 +170,36 @@ fieldset{
 }
 
 form label{
-  @include fontPoppins(1.2rem, 600);
+  @include fontPoppins(1rem, 600);
 }
 
 form ::placeholder{
-  @include fontPoppins(1.2rem, 400);
-  padding: 15px 5px;
+  @include fontPoppins(1rem, 400);
+  padding: 10px 5px;
   color: grey;
 }
 
 form input{
-  @include fontPoppins(1.2rem, 600);
-  padding: 15px 10px;
+  @include fontPoppins(1rem, 600);
+  padding: 10px;
   color: black;
 }
 
 form select{
-  @include fontPoppins(1.2rem, 600);
-  padding: 15px;
+  @include fontPoppins(1rem, 600);
+  padding: 10px;
   color: black;
 }
 
 form option{
-  @include fontPoppins(1.2rem, 400);
-  padding: 15px;
+  @include fontPoppins(1rem, 400);
+  padding: 10px;
   color: grey;
 } 
 
 form textarea{
-  @include fontPoppins(1.2rem, 400);
-  padding: 10px;
+  @include fontPoppins(1rem, 400);
+  padding: 5px;
   color: grey;
   max-width: 80%;
 }

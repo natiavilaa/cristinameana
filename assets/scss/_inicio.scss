@@ -1,14 +1,14 @@
-//VARIABLES, LISTAS  Y MIXIN 
+//VARIABLES, LISTAS Y MIXIN 
 //colores
 $rosaViejo: #E5DDD3;
 $rosa: #EFD6CE, #D39788, #BC716D;
 $verde: #D4D8B6, #A4B26B, #778C3A, #475418;
 
 //botones
-$botonAncho: 220px;
+$botonAncho: 180px;
 $botonAlto: 70px;
 
-//tipografía
+//tipografías
 @mixin fontPoppins ($size, $weight){ 
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -17,13 +17,23 @@ $botonAlto: 70px;
 }
 
 /* -- INICIO -- */
-/* carrousel */
+/* carrousel de imágenes */
 .carousel{
     z-index: 0;
+    top: 96px;
+    margin-bottom: 150px;
     img{
         object-fit: cover;
         object-position: center;
-        height: 90vh;
+        @media (min-width: 992px){
+            height: 90vh;
+        }
+        @media (min-width: 768px) and (max-width: 991px){
+            height: 70vh;
+        }
+        @media (max-width: 767px){
+            height: 50vh;
+        }
     }
 }
   
@@ -41,7 +51,7 @@ button{
     margin-bottom: 50px;
 }
   
-/* presentacion */
+/* presentación con foto */
 .presentacion{
     display: flex;
     flex-wrap: wrap;
@@ -63,7 +73,7 @@ button{
     }
 }
  
-/* eventos */
+/* eventos recientes */
 .eventos{
     display: flex;
     flex-direction: column;
@@ -144,7 +154,7 @@ button{
     padding: 20px;
 }
   
-/* testimonios */
+/* testimonios de clientes */
 .testimonios{
     display: flex;
     flex-direction: column;
@@ -169,7 +179,7 @@ button{
     justify-content: space-around;
     align-items: center;
     width: 70vw;
-    @media (max-width: 767px){
+    @media (max-width: 991px){
       flex-wrap: wrap;
     }
 }
@@ -193,7 +203,7 @@ button{
     border-radius: 250px;
 }
   
-/* servicios */
+/* nuestros servicios */
 .servicios__titulo{
     margin: 50px auto;
     align-self: center;

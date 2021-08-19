@@ -1,14 +1,14 @@
-//VARIABLES, LISTAS  Y MIXIN 
+//VARIABLES, LISTAS Y MIXIN 
 //colores
 $rosaViejo: #E5DDD3;
 $rosa: #EFD6CE, #D39788, #BC716D;
 $verde: #D4D8B6, #A4B26B, #778C3A, #475418;
 
 //botones
-$botonAncho: 220px;
+$botonAncho: 180px;
 $botonAlto: 70px;
 
-//tipografía
+//tipografías
 @mixin fontPoppins ($size, $weight){ 
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -29,7 +29,7 @@ $botonAlto: 70px;
   }
 
 .service__card1{
-  width: 100vw;
+  width: 100%;
   margin: auto;
   padding: 0 10%;
   @media (min-width: 992px){

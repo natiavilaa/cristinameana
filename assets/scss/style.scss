@@ -11,17 +11,17 @@
 @import "servicios";
 @import "contacto";
 
-//VARIABLES, LISTAS  Y MIXIN 
+//VARIABLES, LISTAS Y MIXIN 
 //colores
 $rosaViejo: #E5DDD3;
 $rosa: #EFD6CE, #D39788, #BC716D;
 $verde: #D4D8B6, #A4B26B, #778C3A, #475418;
 
 //botones
-$botonAncho: 220px;
+$botonAncho: 180px;
 $botonAlto: 70px;
 
-//tipografía
+//tipografías
 @mixin fontPoppins ($size, $weight){ 
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -39,13 +39,13 @@ body{
         @include fontPoppins(4rem, 700)
     }
     h2{
-        @include fontPoppins(3rem, 600)
+        @include fontPoppins(2.7rem, 600)
     }
     h3{
         @include fontPoppins(2rem, 500)
     }
     p{
-        @include fontPoppins(1.4rem, 400)
+        @include fontPoppins(1.2rem, 400)
     }
     strong{
         @include fontPoppins(4rem, 700)
@@ -54,37 +54,37 @@ body{
 
 @media (min-width: 768px) and (max-width: 991px){
     h1{
-        @include fontPoppins(3.5rem, 700)
-    }
-    h2{
-        @include fontPoppins(2.5rem, 600)
-    }
-    h3{
-        @include fontPoppins(1.5rem, 500)
-    }
-    p{
-        @include fontPoppins(1.2rem, 400)
-    }
-    strong{
-        @include fontPoppins(3.54rem, 700)
-    }
-}
-
-@media (max-width: 767px){
-    h1{
-        @include fontPoppins(2.7rem, 700)
+        @include fontPoppins(3rem, 700)
     }
     h2{
         @include fontPoppins(2rem, 600)
     }
     h3{
-        @include fontPoppins(1.3rem, 500)
+        @include fontPoppins(1.5rem, 500)
     }
     p{
         @include fontPoppins(1rem, 400)
     }
     strong{
         @include fontPoppins(3rem, 700)
+    }
+}
+
+@media (max-width: 767px){
+    h1{
+        @include fontPoppins(2rem, 700)
+    }
+    h2{
+        @include fontPoppins(1.3rem, 600)
+    }
+    h3{
+        @include fontPoppins(1rem, 500)
+    }
+    p{
+        @include fontPoppins(0.8rem, 400)
+    }
+    strong{
+        @include fontPoppins(2rem, 700)
     }
 }
 
@@ -97,7 +97,7 @@ a{
     }
 }
   
-/* nav */
+/* barra de navegación */
 nav{ 
     z-index: 1;
     position: fixed;
@@ -181,11 +181,16 @@ nav{
     background-color: nth($rosa,1);
     border: none;
     border-radius: 10px;
+    padding: 10px;
 }
   
-.dropdown-item:hover {
-    background-color: nth($rosa,2);
+a.dropdown-item{
     color: black;
+    padding: 3px;
+    &:hover{
+        padding: 3px;
+        background-color: transparent;
+    }
 }
   
 /* footer */
@@ -239,10 +244,10 @@ footer{
                         font-size: 1.2rem;
                     }
                     @media (min-width: 768px) and (max-width: 991px){
-                        font-size: 1.1rem;
+                        font-size: 1rem;
                     }
                     @media (max-width: 767px){
-                        font-size: 1rem;
+                        font-size: 0.8rem;
                     }
                 }
             }
@@ -331,10 +336,3 @@ footer{
     box-shadow: 2px 2px 3px rgb(78, 78, 78);
     padding-top: 5px;
 }
-.procesoDiseno{
-    padding-top: 150px;
-    h2{
-      text-align: center;
-      margin-bottom: 100px;
-    }
-  }

@@ -1,42 +1,44 @@
-//VARIABLES, LISTAS  Y MIXIN 
+//VARIABLES, LISTAS Y MIXIN 
 //colores
 $rosaViejo: #E5DDD3;
 $rosa: #EFD6CE, #D39788, #BC716D;
 $verde: #D4D8B6, #A4B26B, #778C3A, #475418;
 
 //botones
-$botonAncho: 200px;
+$botonAncho: 180px;
 $botonAlto: 70px;
 
-//tipografía
+//tipografías
 @mixin fontPoppins ($size, $weight){ 
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-size: $size;
-    font-weight: $weight;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: $size;
+  font-weight: $weight;
 }
 
 /* -- SOBRE MI -- */
-/* cristina */
+/* frase y fotografía de Cristina */
 .cristina{
   display: flex;
   flex-direction: row;
   justify-content:center;
   align-content: center;
   background-image: linear-gradient(to right, nth($verde,1), nth($verde,2));
-  height: 700px;
-  width: 100vw;
+  width: 100%;
   position: relative;
-  top: 50px;
+  top: 96px;
+  padding: 50px 0;
   gap: 50px;
   @media (min-width: 992px){
     flex-wrap: nowrap;
   }
   @media (min-width: 768px) and (max-width: 991px){
     flex-wrap: wrap;
+    gap: 30px;
   }
   @media (max-width: 767px){
     flex-wrap: wrap;
+    gap: 10px;
   } 
 } 
   
@@ -45,7 +47,6 @@ $botonAlto: 70px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 50px;
   p{
     max-width: 1200px;
   }
@@ -57,9 +58,6 @@ $botonAlto: 70px;
     color: nth($verde,3);
     font-style: italic;
   }
-  @media (max-width: 767px){
-    margin-top: 100px;
-  } 
 }
   
 .cristina__parrafo{
@@ -77,13 +75,13 @@ $botonAlto: 70px;
       height: 500px;
       }
     @media (min-width: 992px) and (max-width: 1200px){
-      height: 350px;
+      height: 400px;
     }
     @media (min-width: 768px) and (max-width: 991px){
-      height: 250px;
+      height: 300px;
     }
     @media (max-width: 767px){
-      height: 0;
+      height: 250px;
     }
   }
 }
@@ -95,7 +93,7 @@ $botonAlto: 70px;
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-  margin: 150px auto;
+  margin: 150px auto 50px auto;
   width: 80vw;
   flex-wrap: wrap;
   gap:50px;
@@ -147,7 +145,7 @@ $botonAlto: 70px;
   }
 }
 
-/* logros */
+/* pequeños logros */
 .logros{
   display: flex;
   justify-content: space-around;
@@ -171,18 +169,15 @@ $botonAlto: 70px;
   justify-content: space-around;
   gap: 30px;
   padding: 30px 0;
-  @media (max-width: 767px){
-    flex-direction:row;
-  }
 }
 
-/* hobbies */
+/* hobbies y pasiones*/
 .hobbies{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
-  margin: 100px 0;
+  margin: 50px 0;
   h4{
     font-size: 1.2rem;
     font-weight: 400;
@@ -220,6 +215,9 @@ $botonAlto: 70px;
   justify-content: center;
   flex-wrap: wrap;
   gap: 100px;
+  @media (max-width: 767px){
+    gap: 30px;
+  }
 }
 
 .hobbies__card1, .hobbies__card2{ 
